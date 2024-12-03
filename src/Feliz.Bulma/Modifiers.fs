@@ -240,6 +240,7 @@ module private ClassLiterals =
     let [<Literal>] ``is-light`` = "is-light"
     let [<Literal>] ``is-dark`` = "is-dark"
     let [<Literal>] ``is-primary`` = "is-primary"
+    let [<Literal>] ``is-secondary`` = "is-secondary"
     let [<Literal>] ``is-link`` = "is-link"
     let [<Literal>] ``is-info`` = "is-info"
     let [<Literal>] ``is-success`` = "is-success"
