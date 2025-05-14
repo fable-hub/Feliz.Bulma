@@ -31,4 +31,4 @@ or using [Paket](http://fsprojects.github.io/Paket/getting-started.html)
 
 ## Documentation
 
-Feliz.Bulma has documentation available on https://mangelmaxime.github.io/Feliz.Bulma/
+Feliz.Bulma has documentation available on https://fable-hub.github.io/Feliz.Bulma/
