@@ -39,6 +39,7 @@ module DatePicker =
         abstract maxDate: DateTime option
         abstract dateOnly : bool
         abstract allowTextInput : bool
+        abstract showClearButton : bool
         abstract closeOnSelect: bool
 
     type private DateTimeValue = { Date : DateTime option; Time : TimeSpan option }
@@ -464,14 +465,15 @@ module DatePicker =
                             ]
                     ]
             ]
-            Html.divClassed "datetimepicker-footer" [
-                Html.button [
-                    prop.classes [ "datetimepicker-footer-clear"; "has-text-danger"; "button"; "is-small"; "is-text" ]
-                    prop.type' "button"
-                    prop.text p.clearLabel
-                    prop.onClick onClear
+            if p.showClearButton then
+                Html.divClassed "datetimepicker-footer" [
+                    Html.button [
+                        prop.classes [ "datetimepicker-footer-clear"; "has-text-danger"; "button"; "is-small"; "is-text" ]
+                        prop.type' "button"
+                        prop.text p.clearLabel
+                        prop.onClick onClear
+                    ]
                 ]
-            ]
         ]
         let format (d:DateTime) =
             let formatString =
@@ -616,3 +618,4 @@ type dateTimePicker =
     /// Close the picker when the date is selected, only applicable for DatePicker
     static member inline closeOnSelect (v:bool) : IDateTimePickerProperty = unbox ("closeOnSelect", v)
     static member inline allowTextInput (v:bool) : IDateTimePickerProperty = unbox ("allowTextInput", v)
+    static member inline showClearButton (v:bool) : IDateTimePickerProperty = unbox ("showClearButton", v)
