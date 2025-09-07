@@ -359,6 +359,8 @@ module private ClassLiterals =
     let [<Literal>] ``has-dot-separator`` = "has-dot-separator"
     let [<Literal>] ``has-succeeds-separator`` = "has-succeeds-separator"
     let [<Literal>] ``is-active`` = "is-active"
+    let [<Literal>] ``is-skeleton`` = "is-skeleton"
+    let [<Literal>] ``has-skeleton`` = "has-skeleton"
     let [<Literal>] ``is-up`` = "is-up"
     let [<Literal>] ``is-transparent`` = "is-transparent"
     let [<Literal>] ``has-shadow`` = "has-shadow"
@@ -975,6 +977,8 @@ type helpers =
     static member inline isInlineFlexWidescreen = PropertyBuilders.mkClass ClassLiterals.``is-inline-flex-widescreen``
     static member inline isInlineFlexFullhd = PropertyBuilders.mkClass ClassLiterals.``is-inline-flex-fullhd``
     static member inline isActive = PropertyBuilders.mkClass ClassLiterals.``is-active``
+    static member inline isSkeleton = PropertyBuilders.mkClass ClassLiterals.``is-skeleton``
+    static member inline hasSkeleton = PropertyBuilders.mkClass ClassLiterals.``has-skeleton``
 
 [<Fable.Core.Erase>]
 type size =
