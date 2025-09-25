@@ -403,10 +403,6 @@ module private ClassLiterals =
     let [<Literal>] ``is-bold`` = "is-bold"
     let [<Literal>] ``is-fullheight`` = "is-fullheight"
     let [<Literal>] ``is-fullheight-with-navbar`` = "is-fullheight-with-navbar"
-    let [<Literal>] ``is-ancestor`` = "is-ancestor"
-    let [<Literal>] ``is-parent`` = "is-parent"
-    let [<Literal>] ``is-child`` = "is-child"
-    let [<Literal>] ``is-vertical`` = "is-vertical"
     let [<Literal>] ``is-1`` = "is-1"
     let [<Literal>] ``is-1-mobile`` = "is-1-mobile"
     let [<Literal>] ``is-1-tablet`` = "is-1-tablet"
@@ -2407,25 +2403,6 @@ type hero =
     static member inline isLarge = PropertyBuilders.mkClass ClassLiterals.``is-large``
     static member inline isFullHeight = PropertyBuilders.mkClass ClassLiterals.``is-fullheight``
     static member inline isFullHeightWithNavbar = PropertyBuilders.mkClass ClassLiterals.``is-fullheight-with-navbar``
-
-[<Fable.Core.Erase>]
-type tile =
-    static member inline isAncestor = PropertyBuilders.mkClass ClassLiterals.``is-ancestor``
-    static member inline isParent = PropertyBuilders.mkClass ClassLiterals.``is-parent``
-    static member inline isChild = PropertyBuilders.mkClass ClassLiterals.``is-child``
-    static member inline isVertical = PropertyBuilders.mkClass ClassLiterals.``is-vertical``
-    static member inline is1 = PropertyBuilders.mkClass ClassLiterals.``is-1``
-    static member inline is2 = PropertyBuilders.mkClass ClassLiterals.``is-2``
-    static member inline is3 = PropertyBuilders.mkClass ClassLiterals.``is-3``
-    static member inline is4 = PropertyBuilders.mkClass ClassLiterals.``is-4``
-    static member inline is5 = PropertyBuilders.mkClass ClassLiterals.``is-5``
-    static member inline is6 = PropertyBuilders.mkClass ClassLiterals.``is-6``
-    static member inline is7 = PropertyBuilders.mkClass ClassLiterals.``is-7``
-    static member inline is8 = PropertyBuilders.mkClass ClassLiterals.``is-8``
-    static member inline is9 = PropertyBuilders.mkClass ClassLiterals.``is-9``
-    static member inline is10 = PropertyBuilders.mkClass ClassLiterals.``is-10``
-    static member inline is11 = PropertyBuilders.mkClass ClassLiterals.``is-11``
-    static member inline is12 = PropertyBuilders.mkClass ClassLiterals.``is-12``
 
 [<Fable.Core.Erase>]
 type columns =
