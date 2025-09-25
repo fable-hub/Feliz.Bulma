@@ -19,6 +19,9 @@ module private ElementLiterals =
     let [<Literal>] ``tile`` = "tile"
     let [<Literal>] ``columns`` = "columns"
     let [<Literal>] ``column`` = "column"
+    let [<Literal>] ``grid`` = "grid"
+    let [<Literal>] ``fixed-grid`` = "fixed-grid"
+    let [<Literal>] ``cell`` = "cell"
     let [<Literal>] ``field`` = "field"
     let [<Literal>] ``label`` = "label"
     let [<Literal>] ``field-label`` = "field-label"
@@ -248,6 +251,20 @@ type Bulma =
     static member inline column elm = ElementBuilders.Div.valueElm ElementLiterals.``column`` elm
     static member inline column s = ElementBuilders.Div.valueStr ElementLiterals.``column`` s
     static member inline column i = ElementBuilders.Div.valueInt ElementLiterals.``column`` i
+
+    static member inline grid props = ElementBuilders.Div.props ElementLiterals.``grid`` props
+    static member inline grid (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``grid`` elms
+    static member inline grid elm = ElementBuilders.Div.valueElm ElementLiterals.``grid`` elm
+
+    static member inline fixedGrid props = ElementBuilders.Div.props ElementLiterals.``fixed-grid`` props
+    static member inline fixedGrid (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``fixed-grid`` elms
+    static member inline fixedGrid elm = ElementBuilders.Div.valueElm ElementLiterals.``fixed-grid`` elm
+
+    static member inline cell props = ElementBuilders.Div.props ElementLiterals.``cell`` props
+    static member inline cell (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``cell`` elms
+    static member inline cell elm = ElementBuilders.Div.valueElm ElementLiterals.``cell`` elm
+    static member inline cell s = ElementBuilders.Div.valueStr ElementLiterals.``cell`` s
+    static member inline cell i = ElementBuilders.Div.valueInt ElementLiterals.``cell`` i
 
     static member inline label props = ElementBuilders.Label.props ElementLiterals.``label`` props
     static member inline label (elms:#seq<ReactElement>) = ElementBuilders.Label.children ElementLiterals.``label`` elms
