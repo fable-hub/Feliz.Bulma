@@ -94,15 +94,12 @@ let view (model : Model) (dispatch : Msg -> unit) =
     let render =
         Bulma.container [
             Bulma.section [
-                Bulma.tile [
-                    tile.isAncestor
-                    prop.children [
-                        Bulma.tile [
-                            tile.is2
-                            prop.children (menuPart model)
-                        ]
-                        Bulma.tile (contentPart model)
+                Bulma.columns [
+                    Bulma.column [
+                        column.is2
+                        prop.children (menuPart model)
                     ]
+                    Bulma.column (contentPart model)
                 ]
             ]
         ]
