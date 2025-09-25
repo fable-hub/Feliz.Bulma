@@ -117,6 +117,8 @@ module private ElementLiterals =
     let [<Literal>] ``panel-icon`` = "panel-icon"
     let [<Literal>] ``tabs`` = "tabs"
     let [<Literal>] ``help`` = "help"
+    let [<Literal>] ``skeleton-block`` = "skeleton-block"
+    let [<Literal>] ``skeleton-lines`` = "skeleton-lines"
 
 open Feliz
 
@@ -507,6 +509,18 @@ type Bulma =
     static member inline subtitle elm = ElementBuilders.H2.valueElm ElementLiterals.``subtitle`` elm
     static member inline subtitle s = ElementBuilders.H2.valueStr ElementLiterals.``subtitle`` s
     static member inline subtitle i = ElementBuilders.H2.valueInt ElementLiterals.``subtitle`` i
+
+    static member inline skeletonBlock props = ElementBuilders.Div.props ElementLiterals.``skeleton-block`` props
+    static member inline skeletonBlock (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``skeleton-block`` elms
+    static member inline skeletonBlock elm = ElementBuilders.Div.valueElm ElementLiterals.``skeleton-block`` elm
+    static member inline skeletonBlock s = ElementBuilders.Div.valueStr ElementLiterals.``skeleton-block`` s
+    static member inline skeletonBlock i = ElementBuilders.Div.valueInt ElementLiterals.``skeleton-block`` i
+
+    static member inline skeletonLines props = ElementBuilders.Div.props ElementLiterals.``skeleton-lines`` props
+    static member inline skeletonLines (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``skeleton-lines`` elms
+    static member inline skeletonLines elm = ElementBuilders.Div.valueElm ElementLiterals.``skeleton-lines`` elm
+    static member inline skeletonLines s = ElementBuilders.Div.valueStr ElementLiterals.``skeleton-lines`` s
+    static member inline skeletonLines i = ElementBuilders.Div.valueInt ElementLiterals.``skeleton-lines`` i
 
 module Bulma =
 
