@@ -195,6 +195,7 @@ module private ClassLiterals =
     let [<Literal>] ``has-text-weight-medium`` = "has-text-weight-medium"
     let [<Literal>] ``has-text-weight-semibold`` = "has-text-weight-semibold"
     let [<Literal>] ``has-text-weight-bold`` = "has-text-weight-bold"
+    let [<Literal>] ``has-text-weight-extrabold`` = "has-text-weight-extrabold"
     let [<Literal>] ``has-text-centered`` = "has-text-centered"
     let [<Literal>] ``has-text-justified`` = "has-text-justified"
     let [<Literal>] ``has-text-left`` = "has-text-left"
@@ -2500,6 +2501,7 @@ type text =
     static member inline hasTextWeightMedium = PropertyBuilders.mkClass ClassLiterals.``has-text-weight-medium``
     static member inline hasTextWeightSemibold = PropertyBuilders.mkClass ClassLiterals.``has-text-weight-semibold``
     static member inline hasTextWeightBold = PropertyBuilders.mkClass ClassLiterals.``has-text-weight-bold``
+    static member inline hasTextWeightExtraBold = PropertyBuilders.mkClass ClassLiterals.``has-text-weight-extrabold``
 
     static member inline hasTextCentered = PropertyBuilders.mkClass ClassLiterals.``has-text-centered``
     static member inline hasTextJustified = PropertyBuilders.mkClass ClassLiterals.``has-text-justified``
