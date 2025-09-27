@@ -11,6 +11,7 @@
         <Compile Include="Views.Shared.fs" />
         <Compile Include="Views.Bulma.fs" />
         <Compile Include="Views.Documentation.fs" />
+        <Compile Include="Views.Documentation.Helpers.fs" />
         <Compile Include="Views.QuickView.fs" />
         <Compile Include="Views.Tooltip.fs" />
         <Compile Include="Views.PageLoader.fs" />

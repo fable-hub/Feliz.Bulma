@@ -57,7 +57,7 @@ Bulma.columns [
             Bulma.title.h4 "Features"
             Html.ul [
                 Html.li "Fully compatible with Feliz DSL syntax"
-                Html.li "100% API coverage of Bulma UI (v0.8.0)"
+                Html.li "100% API coverage of Bulma UI (v1.0.0)"
                 Html.li [ prop.dangerouslySetInnerHTML "Compatible with <a href='https://github.com/zaid-ajaj/femto'>Femto CLI</a> "]
 
             ]
@@ -71,7 +71,7 @@ let apiDescription =
         Bulma.title "Feliz.Bulma - API"
         Html.hr []
         Bulma.content [
-            Html.p [ prop.dangerouslySetInnerHTML "Feliz.Bulma fully covers <a href='https://bulma.io'>Bulma UI</a> in version 0.8.0." ]
+            Html.p [ prop.dangerouslySetInnerHTML "Feliz.Bulma fully covers <a href='https://bulma.io'>Bulma UI</a> in version 1.0.0." ]
         ]
         Bulma.content [
             Bulma.title.h4 "Example"
