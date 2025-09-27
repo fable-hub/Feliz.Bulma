@@ -427,6 +427,8 @@ module private ClassLiterals =
     let [<Literal>] ``has-text-grey-lighter`` = "has-text-grey-lighter"
     let [<Literal>] ``has-text-white-ter`` = "has-text-white-ter"
     let [<Literal>] ``has-text-white-bis`` = "has-text-white-bis"
+    let [<Literal>] ``has-text-current`` = "has-text-current"
+    let [<Literal>] ``has-text-inherit`` = "has-text-inherit"
     let [<Literal>] ``has-background-white`` = "has-background-white"
     let [<Literal>] ``has-background-black`` = "has-background-black"
     let [<Literal>] ``has-background-light`` = "has-background-light"
@@ -608,6 +610,8 @@ module private ClassLiterals =
     let [<Literal>] ``has-background-success-100`` = "has-background-success-100"
     let [<Literal>] ``has-background-warning-100`` = "has-background-warning-100"
     let [<Literal>] ``has-background-danger-100`` = "has-background-danger-100"
+    let [<Literal>] ``has-background-current`` = "has-background-current"
+    let [<Literal>] ``has-background-inherit`` = "has-background-inherit"
     let [<Literal>] ``is-16x16`` = "is-16x16"
     let [<Literal>] ``is-24x24`` = "is-24x24"
     let [<Literal>] ``is-32x32`` = "is-32x32"
@@ -2490,6 +2494,9 @@ type color =
     static member inline hasTextWhiteTer = PropertyBuilders.mkClass ClassLiterals.``has-text-white-ter``
     static member inline hasTextWhiteBis = PropertyBuilders.mkClass ClassLiterals.``has-text-white-bis``
 
+    static member inline hasTextCurrent = PropertyBuilders.mkClass ClassLiterals.``has-text-current``
+    static member inline hasTextInherit = PropertyBuilders.mkClass ClassLiterals.``has-text-inherit``
+
     static member inline hasBackgroundWhite = PropertyBuilders.mkClass ClassLiterals.``has-background-white``
     static member inline hasBackgroundBlack = PropertyBuilders.mkClass ClassLiterals.``has-background-black``
     static member inline hasBackgroundLight = PropertyBuilders.mkClass ClassLiterals.``has-background-light``
@@ -2673,6 +2680,8 @@ type color =
     static member inline hasBackgroundWarning100 = PropertyBuilders.mkClass ClassLiterals.``has-background-warning-100``
     static member inline hasBackgroundDanger100 = PropertyBuilders.mkClass ClassLiterals.``has-background-danger-100``
 
+    static member inline hasBackgroundCurrent = PropertyBuilders.mkClass ClassLiterals.``has-background-current``
+    static member inline hasBackgroundInherit = PropertyBuilders.mkClass ClassLiterals.``has-background-inherit``
 
 [<Fable.Core.Erase>]
 type image =
