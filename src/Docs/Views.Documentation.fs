@@ -332,7 +332,7 @@ let card =
                                 prop.children [
                                     Html.img [
                                         prop.alt "Placeholder image"
-                                        prop.src "https://bulma.io/images/placeholders/1280x960.png"
+                                        prop.src "https://bulma.io/assets/images/placeholders/1280x960.png"
                                     ]
                                 ]
                             ]
@@ -346,7 +346,7 @@ let card =
                                             prop.children [
                                                 Html.img [
                                                     prop.alt "Placeholder image"
-                                                    prop.src "https://bulma.io/images/placeholders/96x96.png"
+                                                    prop.src "https://bulma.io/assets/images/placeholders/96x96.png"
                                                 ]
                                             ]
                                         ]
@@ -377,7 +377,7 @@ let card =
             prop.children [
                 Html.img [
                     prop.alt "Placeholder image"
-                    prop.src "https://bulma.io/images/placeholders/1280x960.png"
+                    prop.src "https://bulma.io/assets/images/placeholders/1280x960.png"
                 ]
             ]
         ]
@@ -391,7 +391,7 @@ let card =
                         prop.children [
                             Html.img [
                                 prop.alt "Placeholder image"
-                                prop.src "https://bulma.io/images/placeholders/96x96.png"
+                                prop.src "https://bulma.io/assets/images/placeholders/96x96.png"
                             ]
                         ]
                     ]
@@ -1258,7 +1258,7 @@ let NavbarComponent () =
                 Bulma.navbarBrand.div [
                     Bulma.navbarItem.a [
                         Html.img [
-                            prop.src "https://bulma.io/images/bulma-logo.png"
+                            prop.src "https://bulma.io/assets/images/bulma-logo.png"
                             prop.height 28
                             prop.width 112
                         ]
@@ -1367,7 +1367,7 @@ let NavbarComponent () =
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
                                 Html.img [
-                                    prop.src "https://bulma.io/images/bulma-logo-white.png"
+                                    prop.src "https://bulma.io/assets/images/bulma-logo-white.png"
                                     prop.height 28
                                     prop.width 112
                                 ]
@@ -1394,7 +1394,7 @@ let NavbarComponent () =
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [
-                Html.img [ prop.src "https://bulma.io/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
+                Html.img [ prop.src "https://bulma.io/assets/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
             ]
         ]
         Bulma.navbarMenu [
@@ -1418,7 +1418,7 @@ let NavbarComponent () =
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
                                 Html.img [
-                                    prop.src "https://bulma.io/images/bulma-logo-white.png"
+                                    prop.src "https://bulma.io/assets/images/bulma-logo-white.png"
                                     prop.height 28
                                     prop.width 112
                                 ]
@@ -1449,7 +1449,7 @@ let NavbarComponent () =
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [
-                Html.img [ prop.src "https://bulma.io/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
+                Html.img [ prop.src "https://bulma.io/assets/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
             ]
         ]
         Bulma.navbarMenu [
@@ -1479,7 +1479,7 @@ let NavbarComponent () =
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
                                 Html.img [
-                                    prop.src "https://bulma.io/images/bulma-logo-white.png"
+                                    prop.src "https://bulma.io/assets/images/bulma-logo-white.png"
                                     prop.height 28
                                     prop.width 112
                                 ]
@@ -1543,7 +1543,7 @@ let NavbarComponent () =
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [
-                Html.img [ prop.src "https://bulma.io/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
+                Html.img [ prop.src "https://bulma.io/assets/images/bulma-logo-white.png"; prop.height 28; prop.width 112; ]
             ]
         ]
         Bulma.navbarMenu [
