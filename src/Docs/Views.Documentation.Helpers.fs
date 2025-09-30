@@ -218,16 +218,40 @@ let HelpersColorComponent () =
 
 let helpersColor = HelpersColorComponent()
 
-[<ReactComponent>]
-let HelpersColorPaletteComponent() =
-    let colorswatch (color: string) =
+type Swatch =
+    [<ReactComponent>]
+    static member WithColor(color: string) =
         Bulma.text.span [
-            prop.className "bd-color-swatch"
             prop.style [
-                style.custom("background", $"var(%s{color})")
+                style.custom("--background", $"var(%s{color})")
+                style.backgroundColor "var(--background)"
+                style.borderRadius (length.em 0.25)
+                style.custom("boxShadow", "0 .125em .25em 0 rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.1)")
+                style.minHeight (length.rem 1.5)
+                style.minWidth (length.rem 1.5)
+                style.padding (length.rem 0.5)
+                style.verticalAlign.top
+                style.display.inlineFlex
             ]
         ]
 
+    [<ReactComponent>]
+    static member WithProperty(property: IReactProperty) =
+        Bulma.text.span [
+            property
+            prop.style [
+                style.borderRadius (length.em 0.25)
+                style.custom("boxShadow", "0 .125em .25em 0 rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.1)")
+                style.minHeight (length.rem 1.5)
+                style.minWidth (length.rem 1.5)
+                style.padding (length.rem 0.5)
+                style.verticalAlign.top
+                style.display.inlineFlex
+            ]
+        ]
+
+[<ReactComponent>]
+let HelpersColorPaletteComponent() =
     let textRow swatchColor textColor (bulmaClass: string) swatchColorInvert  textColorInvert (bulmaClassInvert: string) =
         Html.tableRow [
             Html.td [ Html.code bulmaClass ]
@@ -235,12 +259,12 @@ let HelpersColorPaletteComponent() =
                 textColor
                 prop.text "Hello Bulma"
             ]
-            Html.td [ colorswatch swatchColor ]
+            Html.td [ Swatch.WithColor(swatchColor) ]
             Html.td [
                 textColorInvert
                 prop.text "Hello Bulma"
             ]
-            Html.td [ colorswatch swatchColorInvert ]
+            Html.td [ Swatch.WithColor(swatchColorInvert) ]
         ]
 
     let backgroundRow backgroundColor textColor (bulmaClass: string) =
@@ -258,10 +282,7 @@ let HelpersColorPaletteComponent() =
             Html.td [
                 text.hasTextCentered
                 prop.children [
-                    Bulma.text.span [
-                        prop.className "bd-color-swatch"
-                        backgroundColor
-                    ]
+                    Swatch.WithProperty(backgroundColor)
                 ]
             ]
         ]
@@ -279,31 +300,31 @@ let HelpersColorPaletteComponent() =
                     Html.tbody [
                         Html.tableRow [
                             Html.td [ Html.code "text" ]
-                            Html.td [ colorswatch "--bulma-text" ]
+                            Html.td [ Swatch.WithColor("--bulma-text") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "primary" ]
-                            Html.td [ colorswatch "--bulma-primary" ]
+                            Html.td [ Swatch.WithColor("--bulma-primary") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "info" ]
-                            Html.td [ colorswatch "--bulma-info" ]
+                            Html.td [ Swatch.WithColor("--bulma-info") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "link" ]
-                            Html.td [ colorswatch "--bulma-link" ]
+                            Html.td [ Swatch.WithColor("--bulma-link") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "success" ]
-                            Html.td [ colorswatch "--bulma-success" ]
+                            Html.td [ Swatch.WithColor("--bulma-success") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "warning" ]
-                            Html.td [ colorswatch "--bulma-warning" ]
+                            Html.td [ Swatch.WithColor("--bulma-warning") ]
                         ]
                         Html.tableRow [
                             Html.td [ Html.code "danger" ]
-                            Html.td [ colorswatch "--bulma-danger" ]
+                            Html.td [ Swatch.WithColor("--bulma-danger") ]
                         ]
                     ]
                 ]
