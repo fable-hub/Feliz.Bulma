@@ -20,18 +20,13 @@ type Page =
     | DocumentationTabs
     | DocumentationBreadcrumb
     | DocumentationHelpersColor
+    | DocumentationHelpersColorPalette
+    | DocumentationHelpersSpacing
+    | DocumentationHelpersTypography
+    | DocumentationHelpersVisibility
+    | DocumentationHelpersFlexbox
+    | DocumentationHelpersOther
     | QuickView
-    | DateTimePicker
-    | Tooltip
-    | Checkradio
-    | Popover
-    | PageLoader
-    | Switch
-    | Divider
-    | Badge
-    | Slider
-    | Timeline
-    | TagsInput
 
 let defaultPage = Overview
 
@@ -52,19 +47,14 @@ let parseUrl = function
     | [ "documentation"; "title" ] -> DocumentationTitle
     | [ "documentation"; "tabs" ] -> DocumentationTabs
     | [ "documentation"; "breadcrumb" ] -> DocumentationBreadcrumb
-    | [ "documentation"; "helpers" ] -> DocumentationHelpersColor
+    | [ "documentation"; "helpers"; "color-helpers" ] -> DocumentationHelpersColor
+    | [ "documentation"; "helpers"; "palette-helpers" ] -> DocumentationHelpersColorPalette
+    | [ "documentation"; "helpers"; "spacing-helpers" ] -> DocumentationHelpersSpacing
+    | [ "documentation"; "helpers"; "typography-helpers" ] -> DocumentationHelpersTypography
+    | [ "documentation"; "helpers"; "visibility-helpers" ] -> DocumentationHelpersVisibility
+    | [ "documentation"; "helpers"; "flexbox-helpers" ] -> DocumentationHelpersFlexbox
+    | [ "documentation"; "helpers"; "other-helpers" ] -> DocumentationHelpersOther
     | [ "quickview" ] -> QuickView
-    | [ "datetimepicker" ] -> DateTimePicker
-    | [ "tooltip" ] -> Tooltip
-    | [ "checkradio" ] -> Checkradio
-    | [ "popover" ] -> Popover
-    | [ "pageloader" ] -> PageLoader
-    | [ "switch" ] -> Switch
-    | [ "divider" ] -> Divider
-    | [ "badge" ] -> Badge
-    | [ "slider" ] -> Slider
-    | [ "timeline" ] -> Timeline
-    | [ "tagsinput" ] -> TagsInput
     | _ -> defaultPage
 
 let getHref = function
@@ -84,16 +74,11 @@ let getHref = function
     | DocumentationTitle -> Router.format ([ "documentation"; "title" ])
     | DocumentationTabs -> Router.format ([ "documentation"; "tabs" ])
     | DocumentationBreadcrumb -> Router.format ([ "documentation"; "breadcrumb" ])
-    | DocumentationHelpersColor -> Router.format ([ "documentation"; "helpers" ])
+    | DocumentationHelpersColor -> Router.format ([ "documentation"; "helpers"; "color-helpers" ])
+    | DocumentationHelpersColorPalette -> Router.format ([ "documentation"; "helpers"; "palette-helpers" ])
+    | DocumentationHelpersSpacing -> Router.format ([ "documentation"; "helpers"; "spacing-helpers" ])
+    | DocumentationHelpersTypography -> Router.format ([ "documentation"; "helpers"; "typography-helpers" ])
+    | DocumentationHelpersVisibility -> Router.format ([ "documentation"; "helpers"; "visibility-helpers" ])
+    | DocumentationHelpersFlexbox -> Router.format ([ "documentation"; "helpers"; "flexbox-helpers" ])
+    | DocumentationHelpersOther -> Router.format ([ "documentation"; "helpers"; "other-helpers" ])
     | QuickView -> Router.format ("quickview")
-    | DateTimePicker -> Router.format ("datetimepicker")
-    | Tooltip -> Router.format ("tooltip")
-    | Checkradio -> Router.format ("checkradio")
-    | Popover -> Router.format ("popover")
-    | PageLoader -> Router.format ("pageloader")
-    | Switch -> Router.format ("switch")
-    | Divider -> Router.format ("divider")
-    | Badge -> Router.format ("badge")
-    | Slider -> Router.format ("slider")
-    | Timeline -> Router.format ("timeline")
-    | TagsInput -> Router.format ("tagsinput")

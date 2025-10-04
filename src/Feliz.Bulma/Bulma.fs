@@ -16,9 +16,11 @@ module private ElementLiterals =
     let [<Literal>] ``hero-foot`` = "hero-foot"
     let [<Literal>] ``section`` = "section"
     let [<Literal>] ``footer`` = "footer"
-    let [<Literal>] ``tile`` = "tile"
     let [<Literal>] ``columns`` = "columns"
     let [<Literal>] ``column`` = "column"
+    let [<Literal>] ``grid`` = "grid"
+    let [<Literal>] ``fixed-grid`` = "fixed-grid"
+    let [<Literal>] ``cell`` = "cell"
     let [<Literal>] ``field`` = "field"
     let [<Literal>] ``label`` = "label"
     let [<Literal>] ``field-label`` = "field-label"
@@ -117,6 +119,8 @@ module private ElementLiterals =
     let [<Literal>] ``panel-icon`` = "panel-icon"
     let [<Literal>] ``tabs`` = "tabs"
     let [<Literal>] ``help`` = "help"
+    let [<Literal>] ``skeleton-block`` = "skeleton-block"
+    let [<Literal>] ``skeleton-lines`` = "skeleton-lines"
 
 open Feliz
 
@@ -229,12 +233,6 @@ type Bulma =
     static member inline footer (elms:#seq<ReactElement>) = ElementBuilders.Footer.children ElementLiterals.``footer`` elms
     static member inline footer elm = ElementBuilders.Footer.valueElm ElementLiterals.``footer`` elm
 
-    static member inline tile props = ElementBuilders.Div.props ElementLiterals.``tile`` props
-    static member inline tile (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``tile`` elms
-    static member inline tile elm = ElementBuilders.Div.valueElm ElementLiterals.``tile`` elm
-    static member inline tile s = ElementBuilders.Div.valueStr ElementLiterals.``tile`` s
-    static member inline tile i = ElementBuilders.Div.valueInt ElementLiterals.``tile`` i
-
     static member inline columns props = ElementBuilders.Div.props ElementLiterals.``columns`` props
     static member inline columns (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``columns`` elms
     static member inline columns elm = ElementBuilders.Div.valueElm ElementLiterals.``columns`` elm
@@ -246,6 +244,20 @@ type Bulma =
     static member inline column elm = ElementBuilders.Div.valueElm ElementLiterals.``column`` elm
     static member inline column s = ElementBuilders.Div.valueStr ElementLiterals.``column`` s
     static member inline column i = ElementBuilders.Div.valueInt ElementLiterals.``column`` i
+
+    static member inline grid props = ElementBuilders.Div.props ElementLiterals.``grid`` props
+    static member inline grid (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``grid`` elms
+    static member inline grid elm = ElementBuilders.Div.valueElm ElementLiterals.``grid`` elm
+
+    static member inline fixedGrid props = ElementBuilders.Div.props ElementLiterals.``fixed-grid`` props
+    static member inline fixedGrid (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``fixed-grid`` elms
+    static member inline fixedGrid elm = ElementBuilders.Div.valueElm ElementLiterals.``fixed-grid`` elm
+
+    static member inline cell props = ElementBuilders.Div.props ElementLiterals.``cell`` props
+    static member inline cell (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``cell`` elms
+    static member inline cell elm = ElementBuilders.Div.valueElm ElementLiterals.``cell`` elm
+    static member inline cell s = ElementBuilders.Div.valueStr ElementLiterals.``cell`` s
+    static member inline cell i = ElementBuilders.Div.valueInt ElementLiterals.``cell`` i
 
     static member inline label props = ElementBuilders.Label.props ElementLiterals.``label`` props
     static member inline label (elms:#seq<ReactElement>) = ElementBuilders.Label.children ElementLiterals.``label`` elms
@@ -507,6 +519,18 @@ type Bulma =
     static member inline subtitle elm = ElementBuilders.H2.valueElm ElementLiterals.``subtitle`` elm
     static member inline subtitle s = ElementBuilders.H2.valueStr ElementLiterals.``subtitle`` s
     static member inline subtitle i = ElementBuilders.H2.valueInt ElementLiterals.``subtitle`` i
+
+    static member inline skeletonBlock props = ElementBuilders.Div.props ElementLiterals.``skeleton-block`` props
+    static member inline skeletonBlock (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``skeleton-block`` elms
+    static member inline skeletonBlock elm = ElementBuilders.Div.valueElm ElementLiterals.``skeleton-block`` elm
+    static member inline skeletonBlock s = ElementBuilders.Div.valueStr ElementLiterals.``skeleton-block`` s
+    static member inline skeletonBlock i = ElementBuilders.Div.valueInt ElementLiterals.``skeleton-block`` i
+
+    static member inline skeletonLines props = ElementBuilders.Div.props ElementLiterals.``skeleton-lines`` props
+    static member inline skeletonLines (elms:#seq<ReactElement>) = ElementBuilders.Div.children ElementLiterals.``skeleton-lines`` elms
+    static member inline skeletonLines elm = ElementBuilders.Div.valueElm ElementLiterals.``skeleton-lines`` elm
+    static member inline skeletonLines s = ElementBuilders.Div.valueStr ElementLiterals.``skeleton-lines`` s
+    static member inline skeletonLines i = ElementBuilders.Div.valueInt ElementLiterals.``skeleton-lines`` i
 
 module Bulma =
 

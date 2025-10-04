@@ -33,30 +33,27 @@ let menuPart (model:Model) =
             item "Modal" DocumentationModal
             item "Navbar" DocumentationNavbar
             item "Panel" DocumentationPanel
-            item "ProgressBar" DocumentationProgressbar
+            item "Progress Bar" DocumentationProgressbar
             item "Tag" DocumentationTag
             item "Title" DocumentationTitle
             item "Tabs" DocumentationTabs
             item "Breadcrumb" DocumentationBreadcrumb
-            item "Helpers - Color" DocumentationHelpersColor
         ]
-        Bulma.menuLabel "Components"
+        Bulma.menuLabel "Helpers"
+        Bulma.menuList [
+            item "Color" DocumentationHelpersColor
+            item "Color Palette" DocumentationHelpersColorPalette
+            item "Spacing" DocumentationHelpersSpacing
+            item "Typography" DocumentationHelpersTypography
+            item "Visibility" DocumentationHelpersVisibility
+            item "Flexbox" DocumentationHelpersFlexbox
+            item "Other" DocumentationHelpersOther
+        ]
+        Bulma.menuLabel "Extensions"
         Bulma.menuList [
             item "QuickView" QuickView
-            item "DateTimePicker" DateTimePicker
-            item "Tooltip" Tooltip
-            item "Checkradio" Checkradio
-            item "Popover" Popover
-            item "PageLoader" PageLoader
-            item "Switch" Switch
-            item "Divider" Divider
-            item "Badge" Badge
-            item "Slider" Slider
-            item "Timeline" Timeline
-            item "TagsInput" TagsInput
         ]
     ]
-
 
 let contentPart model =
     match model.CurrentPage with
@@ -76,33 +73,25 @@ let contentPart model =
     | DocumentationTitle -> Views.Documentation.title
     | DocumentationTabs -> Views.Documentation.tabs
     | DocumentationBreadcrumb -> Views.Documentation.breadcrumb
-    | DocumentationHelpersColor -> Views.Documentation.helpersColor
+    | DocumentationHelpersColor -> Views.Documentation.Helpers.helpersColor
+    | DocumentationHelpersColorPalette -> Views.Documentation.Helpers.helpersColorPalette
+    | DocumentationHelpersSpacing -> Views.Documentation.Helpers.helpersSpacing
+    | DocumentationHelpersTypography -> Views.Documentation.Helpers.helpersTypography
+    | DocumentationHelpersVisibility -> Views.Documentation.Helpers.helpersVisibility
+    | DocumentationHelpersFlexbox -> Views.Documentation.Helpers.helpersFlexbox
+    | DocumentationHelpersOther -> Views.Documentation.Helpers.helpersOther
     | QuickView -> Views.QuickView.view
-    | DateTimePicker -> Views.DateTimePicker.view
-    | Tooltip -> Views.Tooltip.view
-    | Checkradio -> Views.Checkradio.view
-    | Popover -> Views.Popover.view
-    | PageLoader -> Views.PageLoader.view
-    | Switch -> Views.Switch.view
-    | Divider -> Views.Divider.view
-    | Badge -> Views.Badge.view
-    | Slider -> Views.Slider.view
-    | Timeline -> Views.Timeline.view
-    | TagsInput -> Views.TagsInput.view
 
 let view (model : Model) (dispatch : Msg -> unit) =
     let render =
         Bulma.container [
             Bulma.section [
-                Bulma.tile [
-                    tile.isAncestor
-                    prop.children [
-                        Bulma.tile [
-                            tile.is2
-                            prop.children (menuPart model)
-                        ]
-                        Bulma.tile (contentPart model)
+                Bulma.columns [
+                    Bulma.column [
+                        column.is2
+                        prop.children (menuPart model)
                     ]
+                    Bulma.column (contentPart model)
                 ]
             ]
         ]
