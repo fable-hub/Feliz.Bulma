@@ -18,6 +18,7 @@ module TimePicker =
         abstract isRange : bool
         abstract displayMode : DisplayMode
         abstract clearLabel : string
+        abstract showClearButton : bool
 
     let private safeHours (hrs:int) =
         if hrs < 0 then 23
@@ -133,14 +134,15 @@ module TimePicker =
                         ]
                 ]
             ]
-            Html.divClassed "datetimepicker-footer" [
-                Html.button [
-                    prop.classes [ "datetimepicker-footer-clear"; "has-text-danger"; "button"; "is-small"; "is-text" ]
-                    prop.type' "button"
-                    prop.text p.clearLabel
-                    prop.onClick (fun _ -> None |> updateTime)
+            if p.showClearButton then
+                Html.divClassed "datetimepicker-footer" [
+                    Html.button [
+                        prop.classes [ "datetimepicker-footer-clear"; "has-text-danger"; "button"; "is-small"; "is-text" ]
+                        prop.type' "button"
+                        prop.text p.clearLabel
+                        prop.onClick (fun _ -> None |> updateTime)
+                    ]
                 ]
-            ]
         ]
         let txtValue =
             if p.isRange then time |> Option.map (fun (s,t) -> sprintf "%s - %s" (toFormattedTime s) (toFormattedTime t))
@@ -186,3 +188,4 @@ type timePicker =
     static member inline isRange (v:bool) : ITimePickerProperty = unbox ("isRange", v)
     static member inline displayMode (v:DisplayMode) : ITimePickerProperty = unbox ("displayMode", v)
     static member inline clearLabel (v:string) : ITimePickerProperty = unbox ("clearLabel", v)
+    static member inline showClearButton (v:bool) : ITimePickerProperty = unbox ("showClearButton", v)
