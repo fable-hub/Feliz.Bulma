@@ -12,3 +12,4 @@ node_modules/
 
 *.fs.js
 *.fs.js.map
+dist/

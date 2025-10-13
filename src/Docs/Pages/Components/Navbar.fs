@@ -115,7 +115,7 @@ let NavbarComponent () =
                     prop.text "Navbar with links"
                 ]
                 Bulma.navbar [
-                    Color.info(currentColor).PropertyName
+                    currentColor.PropertyName
                     prop.children [
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
@@ -139,7 +139,7 @@ let NavbarComponent () =
                 ]
                 Code.render
                     $"""Bulma.navbar [
-    color.is{Color.info(currentColor).Name}
+    color.is{currentColor.Name}
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [
@@ -162,7 +162,7 @@ let NavbarComponent () =
                     prop.text "Navbar with item Start + End"
                 ]
                 Bulma.navbar [
-                    Color.info(currentColor).PropertyName
+                    currentColor.PropertyName
                     prop.children [
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
@@ -192,7 +192,7 @@ let NavbarComponent () =
                 ]
                 Code.render
                     $"""Bulma.navbar [
-    color.is{Color.info(currentColor).Name}
+    color.is{currentColor.Name}
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [
@@ -221,7 +221,7 @@ let NavbarComponent () =
                     prop.text "Navbar with search and end item (user)"
                 ]
                 Bulma.navbar [
-                    Color.info(currentColor).PropertyName
+                    currentColor.PropertyName
                     prop.children [
                         Bulma.navbarBrand.div [
                             Bulma.navbarItem.a [
@@ -282,7 +282,7 @@ let NavbarComponent () =
                 ]
                 Code.render
                     $"""Bulma.navbar [
-    color.is{Color.info(currentColor).Name}
+    color.is{currentColor.Name}
     prop.children [
         Bulma.navbarBrand.div [
             Bulma.navbarItem.a [

@@ -15,79 +15,35 @@ type Color =
     | Light
     | White
 
-type ColorType =
-    {
-        Type: Color
-        Name: string
-        PropertyName: IReactProperty
-    }
+    member this.Name =
+        match this with
+        | Primary -> "Primary"
+        | Danger -> "Danger"
+        | Info -> "Info"
+        | Link -> "Link"
+        | Success -> "Success"
+        | Warning -> "Warning"
+        | Black -> "Black"
+        | Dark -> "Dark"
+        | Light -> "Light"
+        | White -> "White"
 
-let info =
-    function
-    | Primary ->
-        {
-            Type = Primary
-            Name = "Primary"
-            PropertyName = color.isPrimary
-        }
-    | Danger ->
-        {
-            Type = Danger
-            Name = "Danger"
-            PropertyName = color.isDanger
-        }
-    | Info ->
-        {
-            Type = Info
-            Name = "Info"
-            PropertyName = color.isInfo
-        }
-    | Link ->
-        {
-            Type = Link
-            Name = "Link"
-            PropertyName = color.isLink
-        }
-    | Success ->
-        {
-            Type = Success
-            Name = "Success"
-            PropertyName = color.isSuccess
-        }
-    | Warning ->
-        {
-            Type = Warning
-            Name = "Warning"
-            PropertyName = color.isWarning
-        }
-    | Black ->
-        {
-            Type = Black
-            Name = "Black"
-            PropertyName = color.isBlack
-        }
-    | Dark ->
-        {
-            Type = Dark
-            Name = "Dark"
-            PropertyName = color.isDark
-        }
-    | Light ->
-        {
-            Type = Light
-            Name = "Light"
-            PropertyName = color.isLight
-        }
-    | White ->
-        {
-            Type = White
-            Name = "White"
-            PropertyName = color.isWhite
-        }
+    member this.PropertyName =
+        match this with
+        | Primary -> color.isPrimary
+        | Danger -> color.isDanger
+        | Info -> color.isInfo
+        | Link -> color.isLink
+        | Success -> color.isSuccess
+        | Warning -> color.isWarning
+        | Black -> color.isBlack
+        | Dark -> color.isDark
+        | Light -> color.isLight
+        | White -> color.isWhite
 
 let chooseButton (color: Color) (onClick: Color -> unit) =
     Bulma.button.button [
-        info(color).PropertyName
-        prop.text (info(color).Name)
+        color.PropertyName
+        prop.text (color.Name)
         prop.onClick (fun _ -> onClick color)
     ]

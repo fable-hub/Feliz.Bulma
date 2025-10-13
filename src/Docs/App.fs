@@ -33,7 +33,6 @@ let private update (msg: Msg) (currentModel: Model) : Model * Cmd<Msg> =
         },
         Cmd.none
 
-
 let private menuPart (model: Model) =
     let item (label: string) page =
         let isActive =
