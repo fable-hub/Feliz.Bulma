@@ -1,0 +1,19 @@
+{
+    "$schema": "https://alirezanet.github.io/Husky.Net/schema.json",
+    "tasks": [
+        {
+            "name": "fantomas-format-staged-files",
+            "group": "pre-commit",
+            "command": "dotnet",
+            "args": [
+                "fantomas",
+                "${staged}"
+            ],
+            "include": [
+                "**/*.fs",
+                "**/*.fsx",
+                "**/*.fsi"
+            ]
+        }
+    ]
+}

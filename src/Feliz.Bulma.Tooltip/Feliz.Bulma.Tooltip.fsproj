@@ -1,16 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>Feliz.Bulma.Tooltip</PackageId>
-        <Description>Tooltip extension for Feliz.Bulma</Description>
-        <RepositoryUrl>https://github.com/Dzoukr/Feliz.Bulma</RepositoryUrl>
-        <PackageLicenseUrl>https://github.com/Dzoukr/Feliz.Bulma/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageIconUrl></PackageIconUrl>
-        <PackageTags>fsharp;fable;bulma;feliz;react;html</PackageTags>
-        <Authors>Roman Provazník</Authors>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>3.0.0</Version>
-        <PackageReleaseNotes>Version 3.0.0 release</PackageReleaseNotes>
+        <Description>Tooltip extension for Feliz.Bulma</Description>
+        <PackageTags>$(PackageTags);fable-javascript;</PackageTags>
+        <FablePackageType>library</FablePackageType>
     </PropertyGroup>
     <PropertyGroup>
         <NpmDependencies>
@@ -21,8 +14,16 @@
         <Compile Include="Modifiers.fs" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="*.fsproj; *.fs; *.js;" PackagePath="fable\" />
         <ProjectReference Include="..\..\src\Feliz.Bulma\Feliz.Bulma.fsproj" />
     </ItemGroup>
-    <Import Project="..\..\.paket\Paket.Restore.targets" />
+    <ItemGroup>
+      <PackageReference Include="EasyBuild.PackageReleaseNotes.Tasks">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Fable.Package.SDK">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+    </ItemGroup>
 </Project>

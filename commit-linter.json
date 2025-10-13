@@ -1,0 +1,57 @@
+{
+    "types": [
+        {
+            "name": "feat",
+            "description": "A new feature",
+            "skipTagLine": false
+        },
+        {
+            "name": "fix",
+            "description": "A bug fix",
+            "skipTagLine": false
+        },
+        {
+            "name": "docs",
+            "description": "Documentation changes",
+            "skipTagLine": false
+        },
+        {
+            "name": "test",
+            "description": "Adding missing tests or correcting existing tests",
+            "skipTagLine": true
+        },
+        {
+            "name": "style",
+            "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+            "skipTagLine": false
+        },
+        {
+            "name": "refactor",
+            "description": "A code change that neither fixes a bug nor adds a feature",
+            "skipTagLine": false
+        },
+        {
+            "name": "ci",
+            "description": "Changes to CI/CD configuration"
+        },
+        {
+            "name": "chore",
+            "description": "Changes to the build process or auxiliary tools and libraries such as documentation generation"
+        }
+    ],
+    "tags": [
+        "Feliz.Bulma",
+        "Feliz.Bulma.Badge",
+        "Feliz.Bulma.Checkradio",
+        "Feliz.Bulma.DateTimePicker",
+        "Feliz.Bulma.Divider",
+        "Feliz.Bulma.PageLoader",
+        "Feliz.Bulma.Popover",
+        "Feliz.Bulma.QuickView",
+        "Feliz.Bulma.Slider",
+        "Feliz.Bulma.Switch",
+        "Feliz.Bulma.TagsInput",
+        "Feliz.Bulma.Timeline",
+        "Feliz.Bulma.Tooltip"
+    ]
+}

@@ -8,4 +8,3 @@ type divider =
     static member inline isRight = Interop.mkAttr "className" "is-right"
     static member inline isVertical = Interop.mkAttr "className" "is-vertical"
     static member inline text value = Interop.mkAttr "children" value
-

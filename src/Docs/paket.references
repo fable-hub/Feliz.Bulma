@@ -1,7 +1,0 @@
-group Docs
-    FSharp.Core
-    Fable.Core
-    Fable.Elmish.Debugger
-    Fable.Elmish.React
-    Fable.Elmish.HMR
-    Feliz.Router

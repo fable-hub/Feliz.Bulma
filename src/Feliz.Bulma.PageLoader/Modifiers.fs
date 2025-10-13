@@ -20,4 +20,3 @@ type pageLoader =
     static member inline isSuccess = Feliz.Bulma.color.isSuccess
     static member inline isWarning = Feliz.Bulma.color.isWarning
     static member inline isDanger = Feliz.Bulma.color.isDanger
-

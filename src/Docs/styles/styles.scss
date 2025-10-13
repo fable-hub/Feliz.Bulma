@@ -1,6 +1,17 @@
 @charset "utf-8";
 
-@forward "github-gist.scss";
+@use "github-gist.scss";
 
-@forward "bulma";
-@forward "bulma-quickview";
+@use "bulma";
+
+// Override bulma style for code blocks to works with react-shiki
+#shiki-container.content pre {
+    padding: unset;
+}
+
+#shiki-container,pre {
+    padding: unset;
+	border-radius: var(--bulma-radius-medium);
+}
+
+// @forward "bulma-quickview";
