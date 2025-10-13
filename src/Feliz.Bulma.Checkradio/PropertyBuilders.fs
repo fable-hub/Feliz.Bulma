@@ -2,4 +2,4 @@
 
 open Feliz
 
-let inline mkClass (value:string) = Interop.mkAttr "className" value
+let inline mkClass (value: string) = Interop.mkAttr "className" value

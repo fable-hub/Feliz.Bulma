@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="EasyBuild.PackageReleaseNotes.Tasks" Version="2.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+    <PackageVersion Include="Fable.Core" Version="4.5.0" />
+    <PackageVersion Include="Fable.DateFunctions" Version="3.9.0" />
+    <PackageVersion Include="Fable.Elmish" Version="5.0.2" />
+    <PackageVersion Include="Fable.Elmish.HMR" Version="8.0.0" />
+    <PackageVersion Include="Fable.Elmish.React" Version="5.0.0" />
+    <PackageVersion Include="Fable.Package.SDK" Version="1.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+    <PackageVersion Include="Feliz" Version="2.9.0" />
+    <!--
+        Extension packages are stuck on Feliz.Bulma 3.0.0 which supports Bulma 0.9.4
+
+        So we force an exact match
+    -->
+    <PackageVersion Include="Feliz.Bulma" Version="[3.0.0]" />
+    <PackageVersion Include="Feliz.Router" Version="4.0.0" />
+    <PackageVersion Include="FSharp.Core" Version="5.0.2" />
+  </ItemGroup>
+</Project>

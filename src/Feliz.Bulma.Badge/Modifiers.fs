@@ -15,4 +15,3 @@ type badge =
     static member inline isBottom = Interop.mkAttr "className" "is-bottom"
     static member inline isBottomLeft = Interop.mkAttr "className" "is-bottom-left"
     static member inline isLeft = Interop.mkAttr "className" "is-left"
-

@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "bulma": "^1.0.4",
+    "gh-pages": "^6.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-highlight": "^0.15.0",
+    "react-shiki": "^0.9.0",
+    "sass-embedded": "^1.93.2",
+    "vite": "^7.1.9"
+  }
+}

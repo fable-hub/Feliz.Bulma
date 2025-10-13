@@ -4,7 +4,7 @@ open Feliz
 
 [<Fable.Core.Erase>]
 type tooltip =
-    static member inline text (txt:string) = Interop.mkAttr "data-tooltip" txt
+    static member inline text(txt: string) = Interop.mkAttr "data-tooltip" txt
     static member inline hasTooltipMultiline = Interop.mkAttr "className" "has-tooltip-multiline"
     static member inline hasTooltipTop = Interop.mkAttr "className" "has-tooltip-top"
     static member inline hasTooltipRight = Interop.mkAttr "className" "has-tooltip-right"

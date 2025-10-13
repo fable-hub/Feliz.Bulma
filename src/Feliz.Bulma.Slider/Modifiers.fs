@@ -10,4 +10,3 @@ type slider =
     static member inline isSmall = Interop.mkAttr "className" "is-small"
     static member inline isMedium = Interop.mkAttr "className" "is-medium"
     static member inline isLarge = Interop.mkAttr "className" "is-large"
-

@@ -1,17 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>Feliz.Bulma.Checkradio</PackageId>
-        <Description>Checkradio extension for Feliz.Bulma</Description>
-        <RepositoryUrl>https://github.com/Dzoukr/Feliz.Bulma</RepositoryUrl>
-        <PackageProjectUrl>https://dzoukr.github.io/Feliz.Bulma</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/Dzoukr/Feliz.Bulma/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageIconUrl></PackageIconUrl>
-        <PackageTags>fsharp;fable;bulma;feliz;react;html</PackageTags>
-        <Authors>Roman Provazník</Authors>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>3.0.0</Version>
-        <PackageReleaseNotes>Version 3.0.0 release</PackageReleaseNotes>
+        <Description>Checkradio extension for Feliz.Bulma</Description>
+        <PackageTags>$(PackageTags);fable-javascript;checkradio</PackageTags>
+        <FablePackageType>library</FablePackageType>
     </PropertyGroup>
     <PropertyGroup>
         <NpmDependencies>
@@ -24,8 +16,14 @@
         <Compile Include="Modifiers.fs" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="*.fsproj; *.fs; *.js;" PackagePath="fable\" />
-        <ProjectReference Include="..\..\src\Feliz.Bulma\Feliz.Bulma.fsproj" />
+      <PackageReference Include="EasyBuild.PackageReleaseNotes.Tasks">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Fable.Package.SDK">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Feliz.Bulma" />
     </ItemGroup>
-    <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
