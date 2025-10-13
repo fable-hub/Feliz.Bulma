@@ -37,7 +37,7 @@ let ProgressbarComponent () =
             Bulma.columns [
                 Bulma.column [
                     Bulma.progress [
-                        Color.info(color).PropertyName
+                        color.PropertyName
                         prop.value 50
                         prop.max 100
                     ]
@@ -45,7 +45,7 @@ let ProgressbarComponent () =
                 Bulma.column [
                     Code.render
                         $"""Bulma.progress [
-    color.is{Color.info(color).Name}
+    color.is{color.Name}
     prop.value 50
     prop.max 100
 ]"""
@@ -58,7 +58,7 @@ let ProgressbarComponent () =
             Bulma.columns [
                 Bulma.column [
                     Bulma.progress [
-                        Color.info(color).PropertyName
+                        color.PropertyName
                         progress.isSmall
                         prop.value 15
                         prop.max 100
@@ -67,7 +67,7 @@ let ProgressbarComponent () =
                 Bulma.column [
                     Code.render
                         $"""Bulma.progress [
-    color.is{Color.info(color).Name}
+    color.is{color.Name}
     progress.isSmall
     prop.value 15
     prop.max 100
@@ -81,7 +81,7 @@ let ProgressbarComponent () =
             Bulma.columns [
                 Bulma.column [
                     Bulma.progress [
-                        Color.info(color).PropertyName
+                        color.PropertyName
                         progress.isMedium
                         prop.value 45
                         prop.max 100
@@ -90,7 +90,7 @@ let ProgressbarComponent () =
                 Bulma.column [
                     Code.render
                         $"""Bulma.progress [
-    color.is{Color.info(color).Name}
+    color.is{color.Name}
     progress.isMedium
     prop.value 45
     prop.max 100
@@ -104,7 +104,7 @@ let ProgressbarComponent () =
             Bulma.columns [
                 Bulma.column [
                     Bulma.progress [
-                        Color.info(color).PropertyName
+                        color.PropertyName
                         progress.isLarge
                         prop.value 75
                         prop.max 100
@@ -113,7 +113,7 @@ let ProgressbarComponent () =
                 Bulma.column [
                     Code.render
                         $"""Bulma.progress [
-    color.is{Color.info(color).Name}
+    color.is{color.Name}
     progress.isLarge
     prop.value 75
     prop.max 100
@@ -127,7 +127,7 @@ let ProgressbarComponent () =
             Bulma.columns [
                 Bulma.column [
                     Bulma.progress [
-                        Color.info(color).PropertyName
+                        color.PropertyName
                         prop.max 100
                     ]
                 ]
@@ -135,7 +135,7 @@ let ProgressbarComponent () =
                     Code.render
                         $"""Bulma.column [
     Bulma.progress [
-        color.is{Color.info(color).Name}
+        color.is{color.Name}
         prop.max 100
     ]
 ]"""

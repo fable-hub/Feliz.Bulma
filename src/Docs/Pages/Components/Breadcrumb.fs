@@ -17,7 +17,6 @@ let private sample style =
                         ]
                         Html.span "Home"
                     ]
-
                 ]
                 Html.li [
                     prop.className "is-active"
@@ -118,7 +117,5 @@ let view =
                 Bulma.column [ sample breadcrumb.hasBulletSeparator ]
                 Bulma.column [ codeSample "breadcrumb.hasBulletSeparator" ]
             ]
-
-
         ]
     ]
