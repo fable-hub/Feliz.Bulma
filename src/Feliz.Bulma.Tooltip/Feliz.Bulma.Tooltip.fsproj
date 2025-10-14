@@ -14,9 +14,6 @@
         <Compile Include="Modifiers.fs" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Feliz.Bulma\Feliz.Bulma.fsproj" />
-    </ItemGroup>
-    <ItemGroup>
       <PackageReference Include="EasyBuild.PackageReleaseNotes.Tasks">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
@@ -25,5 +22,6 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
+      <PackageReference Include="Feliz.Bulma" />
     </ItemGroup>
 </Project>

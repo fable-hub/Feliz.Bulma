@@ -16,7 +16,7 @@
       },
       "Feliz.Bulma": {
         "type": "Direct",
-        "requested": "[3.0.0, 3.0.0]",
+        "requested": "[3.0.0, 4.0.0)",
         "resolved": "3.0.0",
         "contentHash": "EmHFhfZFddllyA7ZP6FHs0bAo/FjwZrkcAusfZGz2BQnMfQZ+zaNIKMZuvQgbfJ0vBJQTkaazVMWCA91Y2O3bQ==",
         "dependencies": {

@@ -14,17 +14,17 @@ open EasyBuild.Tools.Git
 
 let private publish (projectName: string) =
     let projectFile =
-        Path.Join(Workspace.src.``.``, $"%s{projectName}.fsproj")
+        Path.Join(Workspace.src.``.``, projectName, $"%s{projectName}.fsproj")
         |> FileInfo
 
     let changelogPath =
-        Path.Join(Workspace.src.``.``, "CHANGELOG.md")
+        Path.Join(Workspace.src.``.``, projectName, "CHANGELOG.md")
         |> FileInfo
 
     Femto.validate projectFile
 
-    let _ =
-        ChangelogGen.run (
+    let changelogResult =
+        ChangelogGen.tryRun (
             changelogPath,
             tagFilter = [ projectName ],
             config = Workspace.``commit-linter.json``,
@@ -32,9 +32,14 @@ let private publish (projectName: string) =
             allowDirty = true
         )
 
-    let nupkgPath = DotNet.pack (projectFile = projectFile)
+    match changelogResult with
+    | ChangelogGenResult.NoVersionBump -> printfn "Nothing to deploy"
+    | ChangelogGenResult.Error error -> failwithf "Error while generating changelog:\n%s" error
+    | ChangelogGenResult.NewVersion _ ->
 
-    DotNet.nugetPush (nupkgPath, skipDuplicate = true)
+        let nupkgPath = DotNet.pack (projectFile = projectFile)
+
+        DotNet.nugetPush (nupkgPath, skipDuplicate = true)
 
 type PublishSettings() =
     inherit CommandSettings()
