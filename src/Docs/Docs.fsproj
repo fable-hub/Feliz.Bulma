@@ -40,6 +40,7 @@
       <PackageReference Include="Fable.Elmish" />
       <PackageReference Include="Fable.Elmish.HMR" />
       <PackageReference Include="Fable.Elmish.React" />
+      <PackageReference Include="Fable.Promise" />
       <PackageReference Include="Feliz.Router" />
     </ItemGroup>
 </Project>

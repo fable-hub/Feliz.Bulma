@@ -8,8 +8,6 @@ open Feliz
 open Feliz.Router
 open Feliz.Bulma
 
-importSideEffects "./styles/styles.scss"
-
 type Model =
     {
         CurrentPage: Router.Page
@@ -137,6 +135,44 @@ let view (model: Model) (dispatch: Msg -> unit) =
 open Elmish.HMR
 #endif
 
-Program.mkProgram init update view
-|> Program.withReactBatched "elmish-app"
-|> Program.run
+// Program.mkProgram init update view
+// |> Program.withReactBatched "elmish-app"
+// |> Program.run
+
+open Fable.Core
+
+// let documentationFiles : JS.Promise<unit -> string> array =
+//     emitJsExpr () """
+// import.meta.glob("./Pages/**/*.fs", { as: "raw"})
+// """
+
+// promise {
+//     let resized = ResizeArray()
+
+//     let documentationFiles = documentationFiles |> Promise.all
+
+//     for docFile in documentationFiles do
+//         let! content = docFile()
+//         resized.Add(content)
+
+// }
+// |> Promise.start
+
+// let documentationMap : JS.Map<string, string> =
+//     emitJsStatement () """
+//     """
+
+[<ImportMember("./js/get-sources.js")>]
+let getSources () : JS.Promise<JS.Map<string, string>> = jsNative
+
+promise {
+    let! sources = getSources ()
+
+    sources.keys ()
+    |> Seq.iter (fun key -> printfn $"{key}")
+
+    Program.mkProgram init update view
+    |> Program.withReactBatched "elmish-app"
+    |> Program.run
+}
+|> Promise.start
