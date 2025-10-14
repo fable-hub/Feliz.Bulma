@@ -18,11 +18,9 @@
     </PackageVersion>
     <PackageVersion Include="Feliz" Version="2.9.0" />
     <!--
-        Extension packages are stuck on Feliz.Bulma 3.0.0 which supports Bulma 0.9.4
-
-        So we force an exact match
+        Extension packages are stuck on Feliz.Bulma 3.x which supports Bulma 0.9.4
     -->
-    <PackageVersion Include="Feliz.Bulma" Version="[3.0.0]" />
+    <PackageVersion Include="Feliz.Bulma" Version="[3.0.0,4.0.0)" />
     <PackageVersion Include="Feliz.Router" Version="4.0.0" />
     <PackageVersion Include="FSharp.Core" Version="5.0.2" />
   </ItemGroup>
