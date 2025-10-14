@@ -9,6 +9,7 @@ paket-files/
 node_modules/
 .idea/
 .ionide/
+docs-deploys/
 
 *.fs.js
 *.fs.js.map
