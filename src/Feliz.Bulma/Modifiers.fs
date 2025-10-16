@@ -3937,6 +3937,30 @@ module private ClassLiterals =
     let ``is-vcentered`` = "is-vcentered"
 
     [<Literal>]
+    let ``m-0`` = "m-0"
+
+    [<Literal>]
+    let ``m-1`` = "m-1"
+
+    [<Literal>]
+    let ``m-2`` = "m-2"
+
+    [<Literal>]
+    let ``m-3`` = "m-3"
+
+    [<Literal>]
+    let ``m-4`` = "m-4"
+
+    [<Literal>]
+    let ``m-5`` = "m-5"
+
+    [<Literal>]
+    let ``m-6`` = "m-6"
+
+    [<Literal>]
+    let ``m-auto`` = "m-auto"
+
+    [<Literal>]
     let ``is-col-min-1`` = "is-col-min-1"
 
     [<Literal>]
@@ -6370,6 +6394,9 @@ module private ClassLiterals =
     let ``mt-6`` = "mt-6"
 
     [<Literal>]
+    let ``mt-auto`` = "mt-auto"
+
+    [<Literal>]
     let ``mr-0`` = "mr-0"
 
     [<Literal>]
@@ -6389,6 +6416,9 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``mr-6`` = "mr-6"
+
+    [<Literal>]
+    let ``mr-auto`` = "mr-auto"
 
     [<Literal>]
     let ``mb-0`` = "mb-0"
@@ -6412,6 +6442,9 @@ module private ClassLiterals =
     let ``mb-6`` = "mb-6"
 
     [<Literal>]
+    let ``mb-auto`` = "mb-auto"
+
+    [<Literal>]
     let ``ml-0`` = "ml-0"
 
     [<Literal>]
@@ -6431,6 +6464,9 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``ml-6`` = "ml-6"
+
+    [<Literal>]
+    let ``ml-auto`` = "ml-auto"
 
     [<Literal>]
     let ``mx-0`` = "mx-0"
@@ -6454,6 +6490,9 @@ module private ClassLiterals =
     let ``mx-6`` = "mx-6"
 
     [<Literal>]
+    let ``mx-auto`` = "mx-auto"
+
+    [<Literal>]
     let ``my-0`` = "my-0"
 
     [<Literal>]
@@ -6473,6 +6512,33 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``my-6`` = "my-6"
+
+    [<Literal>]
+    let ``my-auto`` = "my-auto"
+
+    [<Literal>]
+    let ``p-0`` = "p-0"
+
+    [<Literal>]
+    let ``p-1`` = "p-1"
+
+    [<Literal>]
+    let ``p-2`` = "p-2"
+
+    [<Literal>]
+    let ``p-3`` = "p-3"
+
+    [<Literal>]
+    let ``p-4`` = "p-4"
+
+    [<Literal>]
+    let ``p-5`` = "p-5"
+
+    [<Literal>]
+    let ``p-6`` = "p-6"
+
+    [<Literal>]
+    let ``p-auto`` = "p-auto"
 
     [<Literal>]
     let ``pt-0`` = "pt-0"
@@ -6496,6 +6562,9 @@ module private ClassLiterals =
     let ``pt-6`` = "pt-6"
 
     [<Literal>]
+    let ``pt-auto`` = "pt-auto"
+
+    [<Literal>]
     let ``pr-0`` = "pr-0"
 
     [<Literal>]
@@ -6515,6 +6584,9 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``pr-6`` = "pr-6"
+
+    [<Literal>]
+    let ``pr-auto`` = "pr-auto"
 
     [<Literal>]
     let ``pb-0`` = "pb-0"
@@ -6538,6 +6610,9 @@ module private ClassLiterals =
     let ``pb-6`` = "pb-6"
 
     [<Literal>]
+    let ``pb-auto`` = "pb-auto"
+
+    [<Literal>]
     let ``pl-0`` = "pl-0"
 
     [<Literal>]
@@ -6557,6 +6632,9 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``pl-6`` = "pl-6"
+
+    [<Literal>]
+    let ``pl-auto`` = "pl-auto"
 
     [<Literal>]
     let ``px-0`` = "px-0"
@@ -6580,6 +6658,9 @@ module private ClassLiterals =
     let ``px-6`` = "px-6"
 
     [<Literal>]
+    let ``px-auto`` = "px-auto"
+
+    [<Literal>]
     let ``py-0`` = "py-0"
 
     [<Literal>]
@@ -6599,6 +6680,9 @@ module private ClassLiterals =
 
     [<Literal>]
     let ``py-6`` = "py-6"
+
+    [<Literal>]
+    let ``py-auto`` = "py-auto"
 
 [<Fable.Core.Erase>]
 type helpers =
@@ -7070,6 +7154,14 @@ type size =
 
 [<Fable.Core.Erase>]
 type spacing =
+    static member inline m0 = PropertyBuilders.mkClass ClassLiterals.``m-0``
+    static member inline m1 = PropertyBuilders.mkClass ClassLiterals.``m-1``
+    static member inline m2 = PropertyBuilders.mkClass ClassLiterals.``m-2``
+    static member inline m3 = PropertyBuilders.mkClass ClassLiterals.``m-3``
+    static member inline m4 = PropertyBuilders.mkClass ClassLiterals.``m-4``
+    static member inline m5 = PropertyBuilders.mkClass ClassLiterals.``m-5``
+    static member inline m6 = PropertyBuilders.mkClass ClassLiterals.``m-6``
+    static member inline ma = PropertyBuilders.mkClass ClassLiterals.``m-auto``
     static member inline mt0 = PropertyBuilders.mkClass ClassLiterals.``mt-0``
     static member inline mt1 = PropertyBuilders.mkClass ClassLiterals.``mt-1``
     static member inline mt2 = PropertyBuilders.mkClass ClassLiterals.``mt-2``
@@ -7077,6 +7169,7 @@ type spacing =
     static member inline mt4 = PropertyBuilders.mkClass ClassLiterals.``mt-4``
     static member inline mt5 = PropertyBuilders.mkClass ClassLiterals.``mt-5``
     static member inline mt6 = PropertyBuilders.mkClass ClassLiterals.``mt-6``
+    static member inline mta = PropertyBuilders.mkClass ClassLiterals.``mt-auto``
     static member inline mr0 = PropertyBuilders.mkClass ClassLiterals.``mr-0``
     static member inline mr1 = PropertyBuilders.mkClass ClassLiterals.``mr-1``
     static member inline mr2 = PropertyBuilders.mkClass ClassLiterals.``mr-2``
@@ -7084,6 +7177,7 @@ type spacing =
     static member inline mr4 = PropertyBuilders.mkClass ClassLiterals.``mr-4``
     static member inline mr5 = PropertyBuilders.mkClass ClassLiterals.``mr-5``
     static member inline mr6 = PropertyBuilders.mkClass ClassLiterals.``mr-6``
+    static member inline mra = PropertyBuilders.mkClass ClassLiterals.``mr-auto``
     static member inline mb0 = PropertyBuilders.mkClass ClassLiterals.``mb-0``
     static member inline mb1 = PropertyBuilders.mkClass ClassLiterals.``mb-1``
     static member inline mb2 = PropertyBuilders.mkClass ClassLiterals.``mb-2``
@@ -7091,6 +7185,7 @@ type spacing =
     static member inline mb4 = PropertyBuilders.mkClass ClassLiterals.``mb-4``
     static member inline mb5 = PropertyBuilders.mkClass ClassLiterals.``mb-5``
     static member inline mb6 = PropertyBuilders.mkClass ClassLiterals.``mb-6``
+    static member inline mba = PropertyBuilders.mkClass ClassLiterals.``mb-auto``
     static member inline ml0 = PropertyBuilders.mkClass ClassLiterals.``ml-0``
     static member inline ml1 = PropertyBuilders.mkClass ClassLiterals.``ml-1``
     static member inline ml2 = PropertyBuilders.mkClass ClassLiterals.``ml-2``
@@ -7098,6 +7193,7 @@ type spacing =
     static member inline ml4 = PropertyBuilders.mkClass ClassLiterals.``ml-4``
     static member inline ml5 = PropertyBuilders.mkClass ClassLiterals.``ml-5``
     static member inline ml6 = PropertyBuilders.mkClass ClassLiterals.``ml-6``
+    static member inline mla = PropertyBuilders.mkClass ClassLiterals.``ml-auto``
     static member inline mx0 = PropertyBuilders.mkClass ClassLiterals.``mx-0``
     static member inline mx1 = PropertyBuilders.mkClass ClassLiterals.``mx-1``
     static member inline mx2 = PropertyBuilders.mkClass ClassLiterals.``mx-2``
@@ -7105,6 +7201,7 @@ type spacing =
     static member inline mx4 = PropertyBuilders.mkClass ClassLiterals.``mx-4``
     static member inline mx5 = PropertyBuilders.mkClass ClassLiterals.``mx-5``
     static member inline mx6 = PropertyBuilders.mkClass ClassLiterals.``mx-6``
+    static member inline mxa = PropertyBuilders.mkClass ClassLiterals.``mx-auto``
     static member inline my0 = PropertyBuilders.mkClass ClassLiterals.``my-0``
     static member inline my1 = PropertyBuilders.mkClass ClassLiterals.``my-1``
     static member inline my2 = PropertyBuilders.mkClass ClassLiterals.``my-2``
@@ -7112,6 +7209,15 @@ type spacing =
     static member inline my4 = PropertyBuilders.mkClass ClassLiterals.``my-4``
     static member inline my5 = PropertyBuilders.mkClass ClassLiterals.``my-5``
     static member inline my6 = PropertyBuilders.mkClass ClassLiterals.``my-6``
+    static member inline mya = PropertyBuilders.mkClass ClassLiterals.``my-auto``
+    static member inline p0 = PropertyBuilders.mkClass ClassLiterals.``p-0``
+    static member inline p1 = PropertyBuilders.mkClass ClassLiterals.``p-1``
+    static member inline p2 = PropertyBuilders.mkClass ClassLiterals.``p-2``
+    static member inline p3 = PropertyBuilders.mkClass ClassLiterals.``p-3``
+    static member inline p4 = PropertyBuilders.mkClass ClassLiterals.``p-4``
+    static member inline p5 = PropertyBuilders.mkClass ClassLiterals.``p-5``
+    static member inline p6 = PropertyBuilders.mkClass ClassLiterals.``p-6``
+    static member inline pa = PropertyBuilders.mkClass ClassLiterals.``p-auto``
     static member inline pt0 = PropertyBuilders.mkClass ClassLiterals.``pt-0``
     static member inline pt1 = PropertyBuilders.mkClass ClassLiterals.``pt-1``
     static member inline pt2 = PropertyBuilders.mkClass ClassLiterals.``pt-2``
@@ -7119,6 +7225,7 @@ type spacing =
     static member inline pt4 = PropertyBuilders.mkClass ClassLiterals.``pt-4``
     static member inline pt5 = PropertyBuilders.mkClass ClassLiterals.``pt-5``
     static member inline pt6 = PropertyBuilders.mkClass ClassLiterals.``pt-6``
+    static member inline pta = PropertyBuilders.mkClass ClassLiterals.``pt-auto``
     static member inline pr0 = PropertyBuilders.mkClass ClassLiterals.``pr-0``
     static member inline pr1 = PropertyBuilders.mkClass ClassLiterals.``pr-1``
     static member inline pr2 = PropertyBuilders.mkClass ClassLiterals.``pr-2``
@@ -7126,6 +7233,7 @@ type spacing =
     static member inline pr4 = PropertyBuilders.mkClass ClassLiterals.``pr-4``
     static member inline pr5 = PropertyBuilders.mkClass ClassLiterals.``pr-5``
     static member inline pr6 = PropertyBuilders.mkClass ClassLiterals.``pr-6``
+    static member inline pra = PropertyBuilders.mkClass ClassLiterals.``pr-auto``
     static member inline pb0 = PropertyBuilders.mkClass ClassLiterals.``pb-0``
     static member inline pb1 = PropertyBuilders.mkClass ClassLiterals.``pb-1``
     static member inline pb2 = PropertyBuilders.mkClass ClassLiterals.``pb-2``
@@ -7133,6 +7241,7 @@ type spacing =
     static member inline pb4 = PropertyBuilders.mkClass ClassLiterals.``pb-4``
     static member inline pb5 = PropertyBuilders.mkClass ClassLiterals.``pb-5``
     static member inline pb6 = PropertyBuilders.mkClass ClassLiterals.``pb-6``
+    static member inline pba = PropertyBuilders.mkClass ClassLiterals.``pb-auto``
     static member inline pl0 = PropertyBuilders.mkClass ClassLiterals.``pl-0``
     static member inline pl1 = PropertyBuilders.mkClass ClassLiterals.``pl-1``
     static member inline pl2 = PropertyBuilders.mkClass ClassLiterals.``pl-2``
@@ -7140,6 +7249,7 @@ type spacing =
     static member inline pl4 = PropertyBuilders.mkClass ClassLiterals.``pl-4``
     static member inline pl5 = PropertyBuilders.mkClass ClassLiterals.``pl-5``
     static member inline pl6 = PropertyBuilders.mkClass ClassLiterals.``pl-6``
+    static member inline pla = PropertyBuilders.mkClass ClassLiterals.``pl-auto``
     static member inline px0 = PropertyBuilders.mkClass ClassLiterals.``px-0``
     static member inline px1 = PropertyBuilders.mkClass ClassLiterals.``px-1``
     static member inline px2 = PropertyBuilders.mkClass ClassLiterals.``px-2``
@@ -7147,6 +7257,7 @@ type spacing =
     static member inline px4 = PropertyBuilders.mkClass ClassLiterals.``px-4``
     static member inline px5 = PropertyBuilders.mkClass ClassLiterals.``px-5``
     static member inline px6 = PropertyBuilders.mkClass ClassLiterals.``px-6``
+    static member inline pxa = PropertyBuilders.mkClass ClassLiterals.``px-auto``
     static member inline py0 = PropertyBuilders.mkClass ClassLiterals.``py-0``
     static member inline py1 = PropertyBuilders.mkClass ClassLiterals.``py-1``
     static member inline py2 = PropertyBuilders.mkClass ClassLiterals.``py-2``
@@ -7154,6 +7265,7 @@ type spacing =
     static member inline py4 = PropertyBuilders.mkClass ClassLiterals.``py-4``
     static member inline py5 = PropertyBuilders.mkClass ClassLiterals.``py-5``
     static member inline py6 = PropertyBuilders.mkClass ClassLiterals.``py-6``
+    static member inline pya = PropertyBuilders.mkClass ClassLiterals.``py-auto``
 
 [<Fable.Core.Erase>]
 type text =
