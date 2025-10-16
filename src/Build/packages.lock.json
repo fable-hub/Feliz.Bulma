@@ -10,9 +10,9 @@
       },
       "EasyBuild.Tools": {
         "type": "Direct",
-        "requested": "[5.0.0, )",
-        "resolved": "5.0.0",
-        "contentHash": "mfkQzDicloc6Leho9s4fY/7hqrNGzM0BsZtCVHMRv/9WTsLsy08b2Wu0W+nLEg7tfhNuSm+RRxdbKwLzRqxSpw==",
+        "requested": "[5.0.1, )",
+        "resolved": "5.0.1",
+        "contentHash": "m3y6ni3a+Z39UWcRkdh5naRYuSNz1ZYj7ASeg3weJV3M/ofqIOCfJBb0a0J1YiAW7jfczo0YoDVzHRXz5JAAsw==",
         "dependencies": {
           "BlackFox.CommandLine": "1.0.0",
           "FSharp.Core": "6.0.0",

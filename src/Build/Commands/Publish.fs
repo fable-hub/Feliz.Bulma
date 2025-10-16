@@ -11,7 +11,6 @@ open EasyBuild.Tools.DotNet
 open EasyBuild.Tools.ChangelogGen
 open EasyBuild.Tools.Git
 
-
 let private publish (projectName: string) =
     let projectFile =
         Path.Join(Workspace.src.``.``, projectName, $"%s{projectName}.fsproj")
@@ -35,7 +34,8 @@ let private publish (projectName: string) =
     match changelogResult with
     | ChangelogGenResult.NoVersionBump -> printfn "Nothing to deploy"
     | ChangelogGenResult.Error error -> failwithf "Error while generating changelog:\n%s" error
-    | ChangelogGenResult.NewVersion _ ->
+    | ChangelogGenResult.NewVersion newVerion ->
+        printfn $"Publishing %s{projectName} version %s{newVerion}"
 
         let nupkgPath = DotNet.pack (projectFile = projectFile)
 

@@ -14,7 +14,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EasyBuild.FileSystemProvider" Version="1.1.0" />
-    <PackageReference Include="EasyBuild.Tools" Version="5.0.0" />
+    <PackageReference Include="EasyBuild.Tools" Version="5.0.1" />
     <PackageReference Include="Spectre.Console.Cli" Version="0.51.1" />
   </ItemGroup>
 </Project>
