@@ -6,6 +6,7 @@ export default defineConfig((env) => {
     const isDevelpoment = env.mode === 'development';
 
     return {
+        base: isDevelpoment ? '/' : '/Feliz.Bulma/',
         css: {
             devSourcemap: isDevelpoment
         },
