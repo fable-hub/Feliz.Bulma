@@ -82,6 +82,7 @@ type PublishCommand() =
         Git.commit "chore: release"
         Git.push ()
 
-        GhPages.run (workingDirectory = VirtualWorkspace.``docs-deploys``.``.``)
+        // Github Actions handles the gh-pages deployment
+        // GhPages.run (workingDirectory = VirtualWorkspace.``docs-deploys``.``.``)
 
         0
