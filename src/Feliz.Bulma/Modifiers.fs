@@ -2860,6 +2860,12 @@ module private ClassLiterals =
     let ``is-fullhd`` = "is-fullhd"
 
     [<Literal>]
+    let ``is-max-desktop`` = "is-max-desktop"
+
+    [<Literal>]
+    let ``is-max-widescreen`` = "is-max-widescreen"
+
+    [<Literal>]
     let ``is-mobile`` = "is-mobile"
 
     [<Literal>]
@@ -9631,6 +9637,8 @@ type container =
     static member inline isFluid = PropertyBuilders.mkClass ClassLiterals.``is-fluid``
     static member inline isWidescreen = PropertyBuilders.mkClass ClassLiterals.``is-widescreen``
     static member inline isFullHd = PropertyBuilders.mkClass ClassLiterals.``is-fullhd``
+    static member inline isMaxDesktop = PropertyBuilders.mkClass ClassLiterals.``is-max-desktop``
+    static member inline isMaxWidescreen = PropertyBuilders.mkClass ClassLiterals.``is-max-widescreen``
 
 [<Fable.Core.Erase>]
 type level =
@@ -9640,6 +9648,7 @@ type level =
 type section =
     static member inline isMedium = PropertyBuilders.mkClass ClassLiterals.``is-medium``
     static member inline isLarge = PropertyBuilders.mkClass ClassLiterals.``is-large``
+    static member inline isFullHeight = PropertyBuilders.mkClass ClassLiterals.``is-fullheight``
 
 [<Fable.Core.Erase>]
 type hero =
