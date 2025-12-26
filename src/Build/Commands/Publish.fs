@@ -50,10 +50,10 @@ type PublishCommand() =
 
     override __.Execute(context, settings) =
 
-        let nugetKey = Environment.GetEnvironmentVariable("MOTIVITY_NUGET_KEY")
+        let nugetKey = Environment.GetEnvironmentVariable("NUGET_KEY")
 
         if isNull nugetKey then
-            failwithf $"Missing MOTIVITY_NUGET_KEY environment variable"
+            failwithf $"Missing NUGET_KEY environment variable"
 
         if Git.isDirty () then
             failwith "Working directory is dirty, please commit or stash changes before publishing"
