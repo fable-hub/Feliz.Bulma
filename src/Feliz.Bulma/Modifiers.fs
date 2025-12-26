@@ -6846,6 +6846,10 @@ type helpers =
     static member inline isAlignContentCenter =
         PropertyBuilders.mkClass ClassLiterals.``is-align-content-center``
 
+    static member inline isAlignContentSpaceBetween =
+        PropertyBuilders.mkClass ClassLiterals.``is-align-content-space-between``
+
+    [<Obsolete("Use the member without the typo `isAlignContentSpaceBetween`")>]
     static member inline isAlignContentSpaceBetweem =
         PropertyBuilders.mkClass ClassLiterals.``is-align-content-space-between``
 
