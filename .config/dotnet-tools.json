@@ -10,7 +10,7 @@
       "rollForward": false
     },
     "fable": {
-      "version": "4.25.0",
+      "version": "5.0.0",
       "commands": [
         "fable"
       ],
@@ -41,6 +41,13 @@
       "version": "7.0.3",
       "commands": [
         "fantomas"
+      ],
+      "rollForward": false
+    },
+    "dotnet-outdated-tool": {
+      "version": "4.7.1",
+      "commands": [
+        "dotnet-outdated"
       ],
       "rollForward": false
     }

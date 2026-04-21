@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Router.fs" />
@@ -40,6 +40,6 @@
       <PackageReference Include="Fable.Elmish" />
       <PackageReference Include="Fable.Elmish.HMR" />
       <PackageReference Include="Fable.Elmish.React" />
-      <PackageReference Include="Feliz.Router" />
+      <PackageReference Include="alex312.Feliz.Router" />
     </ItemGroup>
 </Project>

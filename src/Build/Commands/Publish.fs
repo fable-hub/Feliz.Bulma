@@ -65,7 +65,7 @@ type PublishCommand() =
             "Feliz.Bulma"
             "Feliz.Bulma.Badge"
             "Feliz.Bulma.Checkradio"
-            "Feliz.Bulma.DateTimePicker"
+            // "Feliz.Bulma.DateTimePicker" Deprecated the Bulma extension is not maintained anymore and incompatible with Bulma v1
             "Feliz.Bulma.Divider"
             "Feliz.Bulma.PageLoader"
             "Feliz.Bulma.Popover"

@@ -4,9 +4,9 @@
     ".NETStandard,Version=v2.0": {
       "EasyBuild.PackageReleaseNotes.Tasks": {
         "type": "Direct",
-        "requested": "[2.0.0, )",
-        "resolved": "2.0.0",
-        "contentHash": "jebz09lxa6pEJzft9Tr/PSNt5r7AVt5xmX3g4Ra+nLU1qtSrOh+hFgsywGn7fVME3LpbzhlX+2J8F7G9y3PxUQ=="
+        "requested": "[2.1.0, )",
+        "resolved": "2.1.0",
+        "contentHash": "1hMVtdIKNfHZA2Zw7L33Y1ZL/3DTK4NSy5gDaNfy2Emp753QxZoqNAPGNxv9MViqfpM62HwEIFZkUW4dCToHVg=="
       },
       "Fable.Package.SDK": {
         "type": "Direct",
@@ -26,9 +26,9 @@
       },
       "FSharp.Core": {
         "type": "Direct",
-        "requested": "[5.0.2, )",
-        "resolved": "5.0.2",
-        "contentHash": "DpcajqENgb3VXaHw1FKfVS+TWwEzck1PCajqLwBAVrtd1lfxd7T8JISVZBdV1mX9+2g48+tIgpNaVJWObdMrBw=="
+        "requested": "[6.0.0, )",
+        "resolved": "6.0.0",
+        "contentHash": "fbv1UwJ2LXVcFCt+GGDPu0sIYA5C6gdDvAupDj3iLQF3clRkua/6J33f+FiGQa8P1tEa+zmz3wrjoTnXZ1UiYg=="
       },
       "NETStandard.Library": {
         "type": "Direct",
@@ -129,7 +129,7 @@
       },
       "Fable.Core": {
         "type": "CentralTransitive",
-        "requested": "[4.5.0, )",
+        "requested": "[5.0.0, )",
         "resolved": "3.2.7",
         "contentHash": "XYvisWEqzYap+9USQGRyI4F9DmZY5EE3STMiwnvlSrwoqHmZRPHyQR3Rp2oGv/mpzNy7PViKdgCiKC/eviG2Ng==",
         "dependencies": {
@@ -138,7 +138,7 @@
       },
       "Feliz": {
         "type": "CentralTransitive",
-        "requested": "[2.9.0, )",
+        "requested": "[3.3.1, )",
         "resolved": "2.4.0",
         "contentHash": "fQxsqj+FpJGT6lMF9thM274moMZnq8pamVYplnXhqyTEV1BctMf2OAfmmkzG98jVaUvIrK6Dc1AyU1EBFpHXgA==",
         "dependencies": {
